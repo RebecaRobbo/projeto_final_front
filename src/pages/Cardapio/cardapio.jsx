@@ -12,19 +12,14 @@ export const Cardapio = () => {
     return (
         <>
             <body>
-                <div className="flex-container top">
+                <div className="top">
                     <h1>Cardápio</h1>
+                </div>
+                <div className="img-menu">
                     <img src={jpIMG} alt="menu" />
                 </div>
-                <div className="flex-container set">
-                    <div className="coxinha">
-                    </div>
-                    <div className="bolinho-de-queijo">
-                    </div>
-                    <div className="pastel">
-                    </div>
-                    <div>
-                    </div>
+                <div className="set">
+                    
                 </div>
             </body>
 

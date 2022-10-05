@@ -1,4 +1,4 @@
-# projeto_final_fron
+# projeto_final_front
 
 O intuito desse projeto é criar um site para divulgar os salgados e doces da Zilda e também para realizar o pedido 
 do cliente 

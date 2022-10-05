@@ -6,7 +6,7 @@ dos clientes
 ## Ficou curioso? Vem dar uma espiadinha nas telas prontas!
 
 Tela de cadastro:
-   - A nossa tela de cadastro já está funcionado! Para poder ver o backend está no seguinte link https://github.com/RebecaRobbo/cadastro-back
+   - A nossa tela de cadastro já está funcionado! Para poder ver o código backend está no seguinte link https://github.com/RebecaRobbo/cadastro-back
 
 ![image](https://user-images.githubusercontent.com/74266277/193955932-a47b8055-e05b-49f3-8c3b-a4a976a4bfb1.png)
 

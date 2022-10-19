@@ -17,7 +17,6 @@ export const Register = () => {
 
     function salvar() {
         debugger
-        console.log(email,name);
         if (password !== autenthPassword || password === "" || autenthPassword === "") {
             alert("As senhas não coincidem, ou não foram preenchidas");
         } else if (password === autenthPassword) {

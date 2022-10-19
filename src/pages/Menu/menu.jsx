@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import './cardapio.css';
+import './menu.css';
 import jpIMG from "../../assests/web-house.png";
 import coxinha from '../../assests/coxinha2.png'
 import mais from '../../assests/mais.png';
@@ -14,7 +14,7 @@ import beijinho from '../../assests/beijinho.png'
 import vela from '../../assests/vela.png'
 import { Link } from "react-router-dom";
 
-export const Cardapio = () => {
+export const Menu = () => {
     useEffect(() => {
         document.title = 'Cardapio';
     });
@@ -26,7 +26,7 @@ export const Cardapio = () => {
                     <h1>Cardápio</h1>
                 </div>
                 <div className="img-menu">
-                    <Link to='/zilda'><img src={jpIMG} alt="menu" /></Link> 
+                    <Link to='/zilda'><img src={jpIMG} alt="menu" /></Link>
                 </div>
                 <div className="set">
                     <div className="combox">
@@ -35,6 +35,9 @@ export const Cardapio = () => {
                             <img src={coxinha} alt="coxinha" />
                             <p>10 unidades</p>
                             <h4>R$10,00</h4>
+                            <div className="btnPlus">
+                                <img src={mais} alt="mais" />
+                            </div>
                         </div>
                     </div>
                     <div className="combox">
@@ -46,7 +49,7 @@ export const Cardapio = () => {
                         </div>
                     </div>
                     <div className="combox">
-                    <div className="pastel-de-queijo">
+                        <div className="pastel-de-queijo">
                             <h3>Pastel de queijo</h3>
                             <img src={pastel} alt="pastel de queijo" />
                             <p>10 unidades</p>
@@ -81,7 +84,7 @@ export const Cardapio = () => {
                         <div className="refri">
                             <h3>Refrigerantes</h3>
                             <img src={refri} alt="refrigerantes" />
-                            <p>1 litro</p> 
+                            <p>1 litro</p>
                             <p className="p2"> 1 lata</p>
                             <h4>R$10,00</h4>
                             <h4 className="h42">R$4,00</h4>
@@ -111,6 +114,12 @@ export const Cardapio = () => {
                             <h4>R$10,00</h4>
                         </div>
                     </div>
+                </div>
+                <div className="btnEnviar">
+                    <button>Save</button>
+                </div>
+                <div className="btnCanc">
+                    <button>Cancel</button>
                 </div>
             </body>
 

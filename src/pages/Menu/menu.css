@@ -78,6 +78,12 @@
     top: 40%;
     left: 7%;
 }
+.set .combox .coxinha .btnPlus{
+    position: absolute;
+    background-color: rgb(241, 223, 223);
+    width:10px; /*largura*/
+    height:10px; /*altura*/
+}
 .set .combox .bolinho-de-queijo h3{
     position: absolute;
     left: 27%;
@@ -340,3 +346,51 @@
     top: 83%;
     left: 86%;
 }
+.btnCanc{
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 8%;
+    height: 50px;
+    top: 94%;
+    right: 200px;
+    background: #6a7dfe;
+    background: -webkit-linear-gradient(to left, #97dddd, #c376e6);
+    background: -o-linear-gradient(to left, #97dddd, #c376e6);
+    background: -moz-linear-gradient(to left, #97dddd, #c376e6);
+    background: linear-gradient(to left, #97dddd, #c376e6);
+}
+.btnEnviar {
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 8%;
+    height: 50px;
+    top: 94%;
+    right: 20px;
+    background: #6a7dfe;
+    background: -webkit-linear-gradient(to left, #97dddd, #c376e6);
+    background: -o-linear-gradient(to left, #97dddd, #c376e6);
+    background: -moz-linear-gradient(to left, #97dddd, #c376e6);
+    background: linear-gradient(to left, #97dddd, #c376e6);
+  }
+  .btnEnviar:hover {
+    cursor: pointer;
+  }
+  .btnCanc:hover {
+    cursor: pointer;
+  }

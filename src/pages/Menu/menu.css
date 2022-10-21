@@ -378,7 +378,7 @@
 }
 .container{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     padding: 0 10px;
@@ -426,10 +426,5 @@
     .img-menu img {
         height: 30px;
         top: 5px;        
-    }
-  }
-@media only screen and (max-width: 1024px) {
-    .container {
-justify-content: center;       
     }
   }

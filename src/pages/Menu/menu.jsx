@@ -18,112 +18,155 @@ export const Menu = () => {
     useEffect(() => {
         document.title = 'Cardapio';
     });
+    const adicionarProduto = (nome, valor) => {
+        const produto = {
+            nome: nome,
+            valor: valor,
+        };
+        if (localStorage.getItem("produtos") != null) {
+            const produtos = JSON.parse(localStorage.getItem("produtos"));
+            for (let i = 0; i < produtos.length; i++) {
+                const el = produtos[i];
+                console.log(el.nome == produto.nome);
+                if (el.nome == produto.nome) {
+                    console.log("sim é", el.nome, nome);
+                    el.valor += valor;
+                } else {
+                    console.log("não é", el.nome, nome);
 
+                    produtos.push(produto);
+                }
+            }
+            // atualiza a lista de produtos
+            localStorage.setItem("produtos", JSON.stringify(produtos))
+        } else {
+            localStorage.setItem("produtos", JSON.stringify([produto]));
+        }
+    }
+    const removerProdutos = (nome, valor) => {
+        localStorage.removeItem("produtos");
+    }
     return (
-        <>
-            <body>
-                <div className="top">
-                    <h1>Cardápio</h1>
-                </div>
-                <div className="img-menu">
-                    <Link to='/zilda'><img src={jpIMG} alt="menu" /></Link>
-                </div>
-                <div className="set">
-                    <div className="combox">
-                        <div className="coxinha">
-                            <h3>Coxinha</h3>
-                            <img src={coxinha} alt="coxinha" />
-                            <p>10 unidades</p>
-                            <h4>R$10,00</h4>
-                            <div className="btnPlus">
-                                <img src={mais} alt="mais" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="combox">
-                        <div className="bolinho-de-queijo">
-                            <h3>Bolinho de queijo</h3>
-                            <img src={bolinho} alt="bolinho de queijo" />
-                            <p>10 unidades</p>
-                            <h4>R$15,00</h4>
-                        </div>
-                    </div>
-                    <div className="combox">
-                        <div className="pastel-de-queijo">
-                            <h3>Pastel de queijo</h3>
-                            <img src={pastel} alt="pastel de queijo" />
-                            <p>10 unidades</p>
-                            <h4>R$20,00</h4>
-                        </div>
-                    </div>
-                    <div className="combox">
-                        <div className="risole">
-                            <h3>Risole</h3>
-                            <img src={risole} alt="risole" />
-                            <p>10 uniades</p>
-                            <h4>R$15,00</h4>
-                        </div>
-                    </div>
-                    <div className="combox">
-                        <div className="enroladinho">
-                            <h3>Enroladinho</h3>
-                            <img src={enroladiho} alt="enroladinho de salsicha" />
-                            <p>10 unidades</p>
-                            <h4>R$20,00</h4>
-                        </div>
-                    </div>
-                    <div className="combox">
-                        <div className="bolo">
-                            <h3>Bolo de aniversário</h3>
-                            <img src={bolo} alt="bolo de aniversário" />
-                            <p>Cada 1 quilo</p>
-                            <h4>R$30,00</h4>
-                        </div>
-                    </div>
-                    <div className="combox">
-                        <div className="refri">
-                            <h3>Refrigerantes</h3>
-                            <img src={refri} alt="refrigerantes" />
-                            <p>1 litro</p>
-                            <p className="p2"> 1 lata</p>
-                            <h4>R$10,00</h4>
-                            <h4 className="h42">R$4,00</h4>
-                        </div>
-                    </div>
-                    <div className="combox">
-                        <div className="brigadeiro">
-                            <h3>Brigadeiro</h3>
-                            <img src={brigadeiro} alt="brigadeiro" />
-                            <p>10 unidades</p>
-                            <h4>R$20,00</h4>
-                        </div>
-                    </div>
-                    <div className="combox">
-                        <div className="beijinho">
-                            <h3>Beijinho</h3>
-                            <img src={beijinho} alt="beijinho" />
-                            <p>10 unidades</p>
-                            <h4>R$20,00</h4>
-                        </div>
-                    </div>
-                    <div className="combox">
-                        <div className="vela">
-                            <h3>Vela</h3>
-                            <img src={vela} alt="vela" />
-                            <p>A unidade</p>
-                            <h4>R$10,00</h4>
-                        </div>
-                    </div>
-                </div>
-                <div className="btnEnviar">
-                    <button>Save</button>
-                </div>
-                <div className="btnCanc">
-                    <button>Cancel</button>
-                </div>
-            </body>
+        <div className="main">
+            <div className="top">
+                <h1>Cardápio</h1>
+                <Link className="img-menu" to='/zilda'><img src={jpIMG} alt="menu" /></Link>
+            </div>
 
-        </>
+            <div className="container">
+                <div className="combox">
+                    <h3>Coxinha</h3>
+                    <img src={coxinha} alt="coxinha" />
+                    <p>10 unidades</p>
+                    <div className="footer-combox">
+                        <h4>R$10,00</h4>
+                        <img src={mais} alt="mais" onClick={() => adicionarProduto("Coxinha", 10)} />
+                    </div>
+
+                </div>
+                <div className="combox">
+                    <h3>Bolinho de queijo</h3>
+                    <img src={bolinho} alt="bolinho de queijo" />
+                    <p>10 unidades</p>
+                    <div className="footer-combox">
+                        <h4>R$15,00</h4>
+                        <img src={mais} alt="mais" onClick={() => adicionarProduto("Bolinho de queijo", 15)} />
+                    </div>
+
+                </div>
+                <div className="combox">
+                    <h3>Pastel de queijo</h3>
+                    <img src={pastel} alt="Pastel de queijo" />
+                    <p>10 unidades</p>
+                    <div className="footer-combox">
+                        <h4>R$20,00</h4>
+                        <img src={mais} alt="mais" onClick={() => adicionarProduto("Pastel de queijo", 20)} />
+                    </div>
+
+                </div>
+                <div className="combox">
+                    <h3>Risole</h3>
+                    <img src={risole} alt="Risole" />
+                    <p>10 unidades</p>
+                    <div className="footer-combox">
+                        <h4>R$15,00</h4>
+                        <img src={mais} alt="mais" onClick={() => adicionarProduto("Risole", 15)} />
+                    </div>
+
+                </div>
+                <div className="combox">
+                    <h3>Enroladinho</h3>
+                    <img src={enroladiho} alt="enroladinho de salsicha" />
+                    <p>10 unidades</p>
+                    <div className="footer-combox">
+                        <h4>R$15,00</h4>
+                        <img src={mais} alt="mais" onClick={() => adicionarProduto("Enroladinho", 15)} />
+                    </div>
+
+                </div>
+                <div className="combox">
+                    <h3>Bolo de aniversário</h3>
+                    <img src={bolo} alt="Bolo de aniversário" />
+                    <p>10 unidades</p>
+                    <div className="footer-combox">
+                        <p>Cada 1 quilo</p>
+                        <h4>R$30,00</h4>
+                        <img src={mais} alt="mais" onClick={() => adicionarProduto("Bolo", 30)} />
+                    </div>
+
+                </div>
+                <div className="combox">
+                    <h3>Beijinho</h3>
+                    <img src={beijinho} alt="beijinho" />
+                    <p>10 unidades</p>
+                    <div className="footer-combox">
+                        <h4>R$20,00</h4>
+                        <img src={mais} alt="mais" onClick={() => adicionarProduto("Beijinho", 20)} />
+                    </div>
+
+                </div>
+                <div className="combox">
+                    <h3>Brigadeiro</h3>
+                    <img src={brigadeiro} alt="brigadeiro" />
+                    <p>10 unidades</p>
+                    <div className="footer-combox">
+                        <h4>R$20,00</h4>
+                        <img src={mais} alt="mais" onClick={() => adicionarProduto("Brigadeiro", 20)} />
+                    </div>
+
+                </div>
+                <div className="combox">
+                    <h3>Vela</h3>
+                    <img src={vela} alt="vela" />
+                    <p>A unidade</p>
+                    <div className="footer-combox">
+                        <h4>R$10,00</h4>
+                        <img src={mais} alt="mais" onClick={() => adicionarProduto("Vela", 10)} />
+                    </div>
+
+                </div>
+                <div className="combox">
+                    <h3>Refrigerantes</h3>
+                    <img src={refri} alt="refrigerantes" />
+                    <p>10 unidades</p>
+                    <div className="footer-combox">
+                        <p>1 litro</p>
+                        <p>R$10,00</p>
+                        <p>1 lata</p>
+                        <p>R$4,00</p>
+                        <img src={mais} alt="mais" onClick={() => adicionarProduto("Refrigerantes", 10)} />
+                    </div>
+
+                </div>
+            </div>
+
+            <footer className="footer">
+                <button className="btnEnviar" type="button">Salvar</button>
+                <button className="btnCanc" onClick={() => removerProdutos()} type="button">Cancelar</button>
+            </footer>
+
+
+        </div>
     );
 }
 

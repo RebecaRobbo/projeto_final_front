@@ -3,51 +3,34 @@
     padding: 0;
 }
 
+.top{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 .top h1 {
-    position: absolute;
-    width: 248px;
-    top: 90px;
-    right: 800px;
+
     font-family: 'Lusitana';
     font-style: normal;
     font-weight: 400;
     font-size: 60px;
-    line-height: 62px;
     color: #000000;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    margin: 25px 0;
 }
 
 .img-menu img {
-    float: right;
-    width: auto;
-    max-width: 100%;
-    height: 60px;
     position: absolute;
+    height: 60px;
     top: 20px;
     right: 10px;
     
 }
 
-.set {
-    position: absolute;
-    width: 1600px;
-    height: 800px;
-    top: 150px;
-    right: 6%;
-}
 
-.set .combox {
-    width: 200px;/*largura*/
-    height: 250px;/*altura*/
-    display: inline-block;
-    margin-top: 6%;
-    margin-left: 6.5%;
-    margin-right: 0.5%;
-    background-color: rgb(241, 223, 223);
-    border-radius: 10px;
-}
 
 .set .combox .coxinha h3{
     position: absolute;
@@ -57,14 +40,7 @@
     font-size: 22px;
 }
 
-.set .combox .coxinha img{
-    position: absolute;
-    width:180px; /*largura*/
-    height:130px; /*altura*/
-    background-color: rgb(241, 223, 223);
-    top: 13%;
-    left: 7.5%;
-}
+
 
 .set .combox .coxinha p{
     position: absolute;
@@ -354,13 +330,10 @@
     line-height: 1.2;
     text-transform: uppercase;
     display: flex;
-    position: absolute;
     justify-content: center;
     align-items: center;
-    width: 8%;
+    width: 121px;
     height: 50px;
-    top: 94%;
-    right: 200px;
     background: #6a7dfe;
     background: -webkit-linear-gradient(to left, #97dddd, #c376e6);
     background: -o-linear-gradient(to left, #97dddd, #c376e6);
@@ -375,13 +348,10 @@
     line-height: 1.2;
     text-transform: uppercase;
     display: flex;
-    position: absolute;
     justify-content: center;
     align-items: center;
-    width: 8%;
+    width: 121px;
     height: 50px;
-    top: 94%;
-    right: 20px;
     background: #6a7dfe;
     background: -webkit-linear-gradient(to left, #97dddd, #c376e6);
     background: -o-linear-gradient(to left, #97dddd, #c376e6);
@@ -393,4 +363,73 @@
   }
   .btnCanc:hover {
     cursor: pointer;
+  }
+
+
+
+/* bloco dos produtos */
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    flex-wrap: wrap;
+  }
+  .combox {
+    width: 210px;/*largura*/
+    height: 300px;/*altura*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(241, 223, 223);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+}
+.combox > h3{
+    font-size: 20px;
+}
+ .combox > img{
+    max-width:100%; /*largura*/
+    max-height:70%; /*altura*/
+}
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+.btnEnviar, .btnCanc{
+    margin: 3px;
+}
+.footer-combox{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.footer-combox > img{
+    width: 30px;
+    cursor: pointer;
+}
+@media only screen and (max-width: 375px) {
+    .img-menu img {
+        height: 30px;
+        top: 5px;        
+    }
+  }
+@media only screen and (max-width: 1024px) {
+    .container {
+justify-content: center;       
+    }
   }

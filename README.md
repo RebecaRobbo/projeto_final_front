@@ -16,5 +16,6 @@ Tela de login:
 ![image](https://user-images.githubusercontent.com/74266277/193956008-1804abe7-be94-4e92-a1de-5868f6de9f9b.png)
 
 Tela de menu:
-![image](![image](https://user-images.githubusercontent.com/74266277/198649050-64210bfc-5249-495c-93ad-10c0de726325.png))
+
+![image](https://user-images.githubusercontent.com/74266277/198649050-64210bfc-5249-495c-93ad-10c0de726325.png)
 ## O projeto ainda está em contrução :construction: 

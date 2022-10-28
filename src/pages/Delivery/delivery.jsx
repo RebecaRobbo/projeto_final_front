@@ -4,6 +4,8 @@ export const Delivery = () => {
     useEffect(() => {
         document.title = 'Delivery';
     });
+    console.log(JSON.parse(localStorage.getItem("produtos")));
+    console.log(JSON.parse(localStorage.getItem("horario")));
 
     return (
         <>

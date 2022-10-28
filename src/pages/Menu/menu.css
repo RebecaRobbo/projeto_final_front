@@ -3,13 +3,14 @@
     padding: 0;
 }
 
-.top{
+.top {
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
+
 .top h1 {
 
     font-family: 'Lusitana';
@@ -24,12 +25,101 @@
 
 .img-menu img {
     position: absolute;
-    height: 60px;
-    top: 20px;
-    right: 10px;
-    
+    height: 70px;
+    top: 30px;
+    right: 30px;
 }
-.btnCanc{
+
+.logo{
+    height: 130px;
+    position: absolute;
+    left: 50px;
+    top: 2px;
+}
+
+/* bloco dos produtos */
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    flex-wrap: wrap;
+}
+
+.combox {
+    width: 210px;
+    /*largura*/
+    height: 300px;
+    /*altura*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(241, 223, 223);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    text-decoration: none;
+    margin-left: 75px;
+    margin-right: 60px;
+    margin-bottom: 20px;
+}
+
+.combox>h3 {
+    font-size: 20px;
+}
+
+.combox>img {
+    max-width: 100%;
+    /*largura*/
+    max-height: 70%;
+    /*altura*/
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+
+.btnEnviar,
+.btnCanc {
+    margin: 3px;
+}
+
+.footer-combox {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.footer-combox>img {
+    width: 30px;
+    cursor: pointer;
+    justify-content: space-between;
+    margin: 2px;
+}
+
+@media only screen and (max-width: 375px) {
+    .img-menu img {
+        height: 30px;
+        top: 5px;
+    }
+}
+
+.btnCanc {
     font-size: 15px;
     border: none;
     border-radius: 10px;
@@ -48,6 +138,7 @@
     background: -moz-linear-gradient(to left, #97dddd, #c376e6);
     background: linear-gradient(to left, #97dddd, #c376e6);
 }
+
 .btnEnviar {
     font-size: 15px;
     border: none;
@@ -65,72 +156,13 @@
     background: -o-linear-gradient(to left, #97dddd, #c376e6);
     background: -moz-linear-gradient(to left, #97dddd, #c376e6);
     background: linear-gradient(to left, #97dddd, #c376e6);
-  }
+}
+
 .btnEnviar:hover {
     cursor: pointer;
-  }
-  .btnCanc:hover {
-    cursor: pointer;
-  }
-/* bloco dos produtos */
-.main{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 100vh;
 }
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 0 10px;
-    flex-wrap: wrap;
-  }
-  .combox {
-    width: 210px;/*largura*/
-    height: 300px;/*altura*/
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: rgb(241, 223, 223);
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px;
-    text-decoration: none;
-}
-.combox > h3{
-    font-size: 20px;
-}
- .combox > img{
-    max-width:100%; /*largura*/
-    max-height:70%; /*altura*/
-}
-.footer{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 10px;
-}
-.btnEnviar, .btnCanc{
-    margin: 3px;
-}
-.footer-combox{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-}
-.footer-combox > img{
-    width: 30px;
+
+.btnCanc:hover {
     cursor: pointer;
 }
-@media only screen and (max-width: 375px) {
-    .img-menu img {
-        height: 30px;
-        top: 5px;        
-    }
-  }
+

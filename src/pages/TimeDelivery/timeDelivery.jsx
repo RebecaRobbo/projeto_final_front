@@ -1,50 +1,39 @@
 
 import { useEffect } from "react";
 import { Link } from 'react-router-dom';
-import Logo from '../../assests/Logo-Lanchonete.png'
+import Logo from '../../assests/Logo-Lanchonete.png';
+import './timeDelivery.css'
 
 export const TimeDelivery = () => {
     useEffect(() => {
         document.title = 'TimeDelivery';
     });
     const adicionaHorario = (horas) => {
-        debugger
         const horario = {
             horas: horas
         };
-        if (localStorage.getItem("horario") != null) {
-            const horarios = JSON.parse(localStorage.getItem("horario"));
-            for (let i = 0; i <= horarios.length; i++) {
-                const el = horarios;
-                if (el.horas == horario.horas) {
-                    console.log(horario)
-                }
-            }
-            localStorage.setItem("horario", JSON.stringify(horarios));
-        }else {
-            localStorage.setItem("horario", JSON.stringify(horario));
-        }
+        localStorage.setItem("horario", JSON.stringify(horario));
+        console.log(horario)
 
     }
     return (
         <>
             <body>
-                <img src={Logo} alt="logo" />
+                <div className="top-time">
+                <img src={Logo} alt="logo" className="logo"/>
                 <h1>Gostaria de marcar um horário para retirada?</h1>
-                <p>Horários disponiveis: </p>
-                <form method="post" action="registerTime">
-                    <select name="time">
-                        <option value="selected">Selected</option>
-                        <option value="18" onClick={() => adicionaHorario("18:00")}>18:00</option>
-                        <option value="18:30" onClick={() => adicionaHorario("18:30")}>18:30</option>
-                        <option value="19" onClick={() => adicionaHorario("19:00")}>19:00</option>
-                        <option value="19:30" onClick={() => adicionaHorario("19:30")}>19:30</option>
-                        <option value="20" onClick={() => adicionaHorario("20:00")}>20:00</option>
-                        <option value="20:30" onClick={() => adicionaHorario("20:30")}>20:30</option>
-                        <option value="21" onClick={() => adicionaHorario("21:00")}>21:00</option>
-                        <option value="21:30" onClick={() => adicionaHorario("21:30")}>21:30</option>
-                    </select>
-                </form>
+                <h2>Horários disponiveis: </h2>
+                </div>
+                <div className="container">
+                    <div className="combox-time"> <h1 onClick={() => adicionaHorario("18")}>18 horas</h1></div>
+                    <div className="combox-time"> <h1 onClick={() => adicionaHorario("18:30")}>18:30 horas</h1></div>
+                    <div className="combox-time"> <h1 onClick={() => adicionaHorario("19")}>19 horas</h1></div>
+                    <div className="combox-time"> <h1 onClick={() => adicionaHorario("19:30")}>19:30 horas</h1></div>
+                    <div className="combox-time"> <h1 onClick={() => adicionaHorario("20")}>20 horas</h1></div>
+                    <div className="combox-time"> <h1 onClick={() => adicionaHorario("20:30")}>20:30 horas</h1></div>
+                    <div className="combox-time"> <h1 onClick={() => adicionaHorario("21")}>21 horas</h1></div>
+                    <div className="combox-time"> <h1 onClick={() => adicionaHorario("21:30")}>21:30 horas</h1></div>
+                </div>
                 <Link className="btnSend" to="/delivery">Send</Link>
             </body>
         </>

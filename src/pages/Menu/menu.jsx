@@ -12,6 +12,8 @@ import refri from '../../assests/refrigerantes.png';
 import brigadeiro from '../../assests/brigadeiro.png';
 import beijinho from '../../assests/beijinho.png'
 import vela from '../../assests/vela.png'
+import menos from '../../assests/menos.png'
+import logo from '../../assests/Logo-Lanchonete.png'
 import { Link } from "react-router-dom";
 
 export const Menu = () => {
@@ -25,6 +27,7 @@ export const Menu = () => {
         };
         if (localStorage.getItem("produtos") != null) {
             const produtos = JSON.parse(localStorage.getItem("produtos"));
+            produtos.push(produto);
             for (let i = 0; i <= produtos.length; i++) {
                 const el = produtos[i];
                 if (el.nome == produto.nome) {
@@ -44,14 +47,29 @@ export const Menu = () => {
         alert("Produto adicionado!")
     }
     const removerProdutos = (nome, valor) => {
-        localStorage.removeItem("produtos");
+        debugger
+        const produtos = JSON.parse(localStorage.getItem("produtos"));
+        if (produtos.length > 0) {
+            for (let i = 0; i <= produtos.length; i++) {
+                if (nome == produtos[i].nome) {
+                    produtos.splice(produtos.indexOf(produtos[i]), 1);
+                    localStorage.setItem("produtos", JSON.stringify(produtos));
+                    alert("Produto removido!")
+                    console.log(produtos);
+                    return;
+                }
+            }
+        }
+        alert("Produto não adicionado no carrinho!")
+
     }
-    
+
     return (
         <div className="main">
             <div className="top">
                 <h1>Cardápio</h1>
                 <Link className="img-menu" to='/zilda'><img src={jpIMG} alt="menu" /></Link>
+                <img src={logo} className="logo" alt="logo" />
             </div>
 
             <div className="container">
@@ -62,6 +80,7 @@ export const Menu = () => {
                     <div className="footer-combox">
                         <h4>R$10,00</h4>
                         <img src={mais} alt="mais" onClick={() => adicionarProduto("Coxinha", 10)} />
+                        <img src={menos} alt="menos" onClick={() => removerProdutos("Coxinha", 10)} />
                     </div>
 
                 </div>
@@ -72,7 +91,9 @@ export const Menu = () => {
                     <div className="footer-combox">
                         <h4>R$15,00</h4>
                         <img src={mais} alt="mais" onClick={() => adicionarProduto("Bolinho de queijo", 15)} />
+                        <img src={menos} alt="menos" onClick={() => removerProdutos("Bolinho de queijo", 15)} />
                     </div>
+
 
                 </div>
                 <div className="combox">
@@ -82,6 +103,7 @@ export const Menu = () => {
                     <div className="footer-combox">
                         <h4>R$20,00</h4>
                         <img src={mais} alt="mais" onClick={() => adicionarProduto("Pastel de queijo", 20)} />
+                        <img src={menos} alt="menos" onClick={() => removerProdutos("Pastel de queijo", 20)} />
                     </div>
 
                 </div>
@@ -92,6 +114,7 @@ export const Menu = () => {
                     <div className="footer-combox">
                         <h4>R$15,00</h4>
                         <img src={mais} alt="mais" onClick={() => adicionarProduto("Risole", 15)} />
+                        <img src={menos} alt="menos" onClick={() => removerProdutos("Risole", 15)} />
                     </div>
 
                 </div>
@@ -102,16 +125,18 @@ export const Menu = () => {
                     <div className="footer-combox">
                         <h4>R$15,00</h4>
                         <img src={mais} alt="mais" onClick={() => adicionarProduto("Enroladinho", 15)} />
+                        <img src={menos} alt="menos" onClick={() => removerProdutos("Enroladinho", 15)} />
                     </div>
 
                 </div>
                 <div className="combox">
-                    <h3>Bolo de aniversário</h3>
+                    <h3>Bolo de festa</h3>
                     <img src={bolo} alt="Bolo de aniversário" />
+                    <p>1 quilo</p>
                     <div className="footer-combox">
-                        <p>1 quilo</p>
                         <h4>R$30,00</h4>
                         <img src={mais} alt="mais" onClick={() => adicionarProduto("Bolo", 30)} />
+                        <img src={menos} alt="menos" onClick={() => removerProdutos("Bolo", 30)} />
                     </div>
 
                 </div>
@@ -122,6 +147,7 @@ export const Menu = () => {
                     <div className="footer-combox">
                         <h4>R$20,00</h4>
                         <img src={mais} alt="mais" onClick={() => adicionarProduto("Beijinho", 20)} />
+                        <img src={menos} alt="menos" onClick={() => removerProdutos("Beijinho", 20)} />
                     </div>
 
                 </div>
@@ -132,6 +158,7 @@ export const Menu = () => {
                     <div className="footer-combox">
                         <h4>R$20,00</h4>
                         <img src={mais} alt="mais" onClick={() => adicionarProduto("Brigadeiro", 20)} />
+                        <img src={menos} alt="menos" onClick={() => removerProdutos("Brigadeiro", 20)} />
                     </div>
 
                 </div>
@@ -142,6 +169,7 @@ export const Menu = () => {
                     <div className="footer-combox">
                         <h4>R$10,00</h4>
                         <img src={mais} alt="mais" onClick={() => adicionarProduto("Vela", 10)} />
+                        <img src={menos} alt="menos" onClick={() => removerProdutos("Vela", 10)} />
                     </div>
 
                 </div>
@@ -152,6 +180,7 @@ export const Menu = () => {
                     <div className="footer-combox">
                         <h4>R$10,00</h4>
                         <img src={mais} alt="mais" onClick={() => adicionarProduto("Refrigerantes", 10)} />
+                        <img src={menos} alt="menos" onClick={() => removerProdutos("Refrigerantes", 10)} />
                     </div>
 
                 </div>

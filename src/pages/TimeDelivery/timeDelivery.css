@@ -1,0 +1,44 @@
+.top-time > img{
+  height: 180px;
+  position: absolute;
+  left: 50px;
+  top: 70px;
+}
+.top-time >h1{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  margin-top: 200px;
+}
+.top-time >h2{
+  display: flex;
+  flex-direction: column;
+  align-items:baseline ;
+  margin: 50px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    cursor: pointer;
+  }
+  .combox-time{
+    width: 210px;/*largura*/
+    height: 60px;/*altura*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(241, 223, 223);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 80px;
+    margin-right: 70px;
+    margin-bottom: 20px;
+  }

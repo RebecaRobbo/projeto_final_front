@@ -17,5 +17,5 @@ Tela de login:
 
 Tela de menu:
    - A tela de menu já está adicionando os produtos no carrinho e somando os valores!
-![image](https://user-images.githubusercontent.com/74266277/198649050-64210bfc-5249-495c-93ad-10c0de726325.png)
+![image](https://user-images.githubusercontent.com/74266277/198676012-ce08632e-9c13-4a1e-8ea1-4bd68da9ae46.png)
 ## O projeto ainda está em contrução :construction: 

@@ -25,16 +25,15 @@ export const Menu = () => {
         };
         if (localStorage.getItem("produtos") != null) {
             const produtos = JSON.parse(localStorage.getItem("produtos"));
-            for (let i = 0; i < produtos.length; i++) {
+            for (let i = 0; i <= produtos.length; i++) {
                 const el = produtos[i];
-                console.log(el.nome == produto.nome);
                 if (el.nome == produto.nome) {
-                    console.log("sim é", el.nome, nome);
-                    el.valor += valor;
+                    console.log("Produto ", el.nome, "valor: ", el.valor);
+                    i = produto.length;
                 } else {
-                    console.log("não é", el.nome, nome);
-
+                    console.log("Produto ", produto.nome, "valor: ", produto.valor);
                     produtos.push(produto);
+                    i = produtos.length;
                 }
             }
             // atualiza a lista de produtos
@@ -42,10 +41,12 @@ export const Menu = () => {
         } else {
             localStorage.setItem("produtos", JSON.stringify([produto]));
         }
+        alert("Produto adicionado!")
     }
     const removerProdutos = (nome, valor) => {
         localStorage.removeItem("produtos");
     }
+    
     return (
         <div className="main">
             <div className="top">
@@ -107,9 +108,8 @@ export const Menu = () => {
                 <div className="combox">
                     <h3>Bolo de aniversário</h3>
                     <img src={bolo} alt="Bolo de aniversário" />
-                    <p>10 unidades</p>
                     <div className="footer-combox">
-                        <p>Cada 1 quilo</p>
+                        <p>1 quilo</p>
                         <h4>R$30,00</h4>
                         <img src={mais} alt="mais" onClick={() => adicionarProduto("Bolo", 30)} />
                     </div>
@@ -148,12 +148,9 @@ export const Menu = () => {
                 <div className="combox">
                     <h3>Refrigerantes</h3>
                     <img src={refri} alt="refrigerantes" />
-                    <p>10 unidades</p>
+                    <p>1 litro</p>
                     <div className="footer-combox">
-                        <p>1 litro</p>
-                        <p>R$10,00</p>
-                        <p>1 lata</p>
-                        <p>R$4,00</p>
+                        <h4>R$10,00</h4>
                         <img src={mais} alt="mais" onClick={() => adicionarProduto("Refrigerantes", 10)} />
                     </div>
 
@@ -162,14 +159,10 @@ export const Menu = () => {
 
             <footer className="footer">
                 <button className="btnEnviar" type="button">Salvar</button>
-                <button className="btnCanc" onClick={() => removerProdutos()} type="button">Cancelar</button>
+                <Link className="btnCanc" onClick={() => removerProdutos()} to='/zilda' type="button">Cancelar</Link>
             </footer>
 
 
-        </div>
+        </div >
     );
 }
-
-
-
-

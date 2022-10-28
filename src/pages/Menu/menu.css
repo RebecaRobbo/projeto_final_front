@@ -29,299 +29,6 @@
     right: 10px;
     
 }
-
-
-
-.set .combox .coxinha h3{
-    position: absolute;
-    left: 10%;
-    top: 30%;
-    background-color: rgb(241, 223, 223);
-    font-size: 22px;
-}
-
-
-
-.set .combox .coxinha p{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 34%;
-    left: 10%;
-}
-.set .combox .coxinha h4{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 40%;
-    left: 7%;
-}
-.set .combox .coxinha .btnPlus{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    width:10px; /*largura*/
-    height:10px; /*altura*/
-}
-.set .combox .bolinho-de-queijo h3{
-    position: absolute;
-    left: 27%;
-    top: 30%;
-    background-color: rgb(241, 223, 223);
-    font-size: 22px;
-}
-.set .combox .bolinho-de-queijo img{
-    position: absolute;
-    width:170px; /*largura*/
-    height:150px; /*altura*/
-    background-color: rgb(241, 223, 223);
-    top: 12%;
-    left: 27%;
-}
-
-.set .combox .bolinho-de-queijo p{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 34%;
-    left: 30%;
-}
-
-.set .combox .bolinho-de-queijo h4{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 40%;
-    left: 26.5%;
-}
-.set .combox .pastel-de-queijo h3{
-    position: absolute;
-    left: 46.5%;
-    top: 30%;
-    background-color: rgb(241, 223, 223);
-    font-size: 22px;
-}
-.set .combox .pastel-de-queijo img{
-    position: absolute;
-    width:170px; /*largura*/
-    height:130px; /*altura*/
-    background-color: rgb(241, 223, 223);
-    top: 12%;
-    left: 46%;
-}
-.set .combox .pastel-de-queijo p{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 34%;
-    left: 49%;
-}
-
-.set .combox .pastel-de-queijo h4{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 40%;
-    left: 46%;
-}
-.set .combox .risole h3{
-    position: absolute;
-    left: 69%;
-    top: 30%;
-    background-color: rgb(241, 223, 223);
-    font-size: 22px;
-}
-.set .combox .risole img{
-    position: absolute;
-    width:170px; /*largura*/
-    height:130px; /*altura*/
-    background-color: rgb(241, 223, 223);
-    top: 14%;
-    left: 66%;
-}
-.set .combox .risole p{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 34%;
-    left: 68.5%;
-}
-.set .combox .risole h4{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 40%;
-    left: 65.5%;
-}
-.set .combox .enroladinho h3{
-    position: absolute;
-    left: 87%;
-    top: 30%;
-    background-color: rgb(241, 223, 223);
-    font-size: 22px;
-}
-.set .combox .enroladinho img{
-    position: absolute;
-    width:170px; /*largura*/
-    height:130px; /*altura*/
-    background-color: rgb(241, 223, 223);
-    top: 14%;
-    left: 86%;
-}
-.set .combox .enroladinho p{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 34%;
-    left: 88.5%;
-}
-.set .combox .enroladinho h4{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 40%;
-    left: 85%;
-}
-
-.set .combox .bolo h3{
-    position: absolute;
-    left: 6.5%;
-    top: 75%;
-    background-color: rgb(241, 223, 223);
-    font-size: 22px;
-}
-
-.set .combox .bolo img{
-    position: absolute;
-    width:180px; /*largura*/
-    height:130px; /*altura*/
-    background-color: rgb(241, 223, 223);
-    top: 57%;
-    left: 7%;
-}
-.set .combox .bolo p{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 78%;
-    left: 10%;
-}
-.set .combox .bolo h4{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 83%;
-    left: 7%;
-}
-.set .combox .refri h3{
-    position: absolute;
-    left: 28%;
-    top: 75%;
-    background-color: rgb(241, 223, 223);
-    font-size: 22px;
-}
-.set .combox .refri img{
-    position: absolute;
-    width:170px; /*largura*/
-    height:150px; /*altura*/
-    background-color: rgb(241, 223, 223);
-    top: 57%;
-    left: 27%;
-}
-
-.set .combox .refri p{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 80%;
-    left: 27%;
-}
-.set .combox .refri .p2{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 82%;
-    left: 27%;
-}
-
-.set .combox .refri h4{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 80%;
-    left: 30.5%;
-}
-.set .combox .refri .h42{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 82%;
-    left: 30.5%;
-}
-.set .combox .brigadeiro h3{
-    position: absolute;
-    left: 48.5%;
-    top: 75%;
-    background-color: rgb(241, 223, 223);
-    font-size: 22px;
-}
-.set .combox .brigadeiro img{
-    position: absolute;
-    width:170px; /*largura*/
-    height:150px; /*altura*/
-    background-color: rgb(241, 223, 223);
-    top: 57%;
-    left: 46.5%;
-}
-.set .combox .brigadeiro p{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 78.5%;
-    left: 49%;
-}
-.set .combox .brigadeiro h4{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 83%;
-    left: 46%;
-}
-.set .combox .beijinho h3{
-    position: absolute;
-    left: 68.5%;
-    top: 75%;
-    background-color: rgb(241, 223, 223);
-    font-size: 22px;
-}
-.set .combox .beijinho img{
-    position: absolute;
-    width:170px; /*largura*/
-    height:150px; /*altura*/
-    background-color: rgb(241, 223, 223);
-    top: 57%;
-    left: 66.5%;
-}
-.set .combox .beijinho p{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 78.5%;
-    left: 68.5%;
-}
-.set .combox .beijinho h4{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 83%;
-    left: 66%;
-}
-.set .combox .vela h3{
-    position: absolute;
-    left: 90%;
-    top: 75%;
-    background-color: rgb(241, 223, 223);
-    font-size: 22px;
-}
-.set .combox .vela img{
-    position: absolute;
-    width:170px; /*largura*/
-    height:150px; /*altura*/
-    background-color: rgb(241, 223, 223);
-    top: 57%;
-    left: 86%;
-}
-.set .combox .vela p{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 78.5%;
-    left: 89%;
-}
-.set .combox .vela h4{
-    position: absolute;
-    background-color: rgb(241, 223, 223);
-    top: 83%;
-    left: 86%;
-}
 .btnCanc{
     font-size: 15px;
     border: none;
@@ -334,6 +41,7 @@
     align-items: center;
     width: 121px;
     height: 50px;
+    text-decoration: none;
     background: #6a7dfe;
     background: -webkit-linear-gradient(to left, #97dddd, #c376e6);
     background: -o-linear-gradient(to left, #97dddd, #c376e6);
@@ -358,15 +66,12 @@
     background: -moz-linear-gradient(to left, #97dddd, #c376e6);
     background: linear-gradient(to left, #97dddd, #c376e6);
   }
-  .btnEnviar:hover {
+.btnEnviar:hover {
     cursor: pointer;
   }
   .btnCanc:hover {
     cursor: pointer;
   }
-
-
-
 /* bloco dos produtos */
 .main{
     width: 100%;
@@ -394,6 +99,7 @@
     border-radius: 10px;
     padding: 15px;
     margin: 10px;
+    text-decoration: none;
 }
 .combox > h3{
     font-size: 20px;

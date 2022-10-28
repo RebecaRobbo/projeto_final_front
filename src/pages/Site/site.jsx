@@ -16,7 +16,7 @@ export const Zilda = () => {
             <div className="flex-container menu">
                 <div><img src={jpIMG} alt="Logo" /></div>
                 <ul className="list-items">
-                    <li><Link className='link' to='/cardapio'>Cardápio</Link></li>       
+                    <li><Link className='link' to='/menu'>Cardápio</Link></li>       
                     <li><Link className='link' to='/login'>Login</Link></li>
                     <li><Link className='link' to='/register'>Cadastro</Link></li>
                     <li><Link className='link' to='#'>Sistema</Link></li>

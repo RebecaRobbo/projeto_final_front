@@ -31,6 +31,8 @@ export const Menu = () => {
                 const el = produtos[i];
                 if (el.nome == produto.nome) {
                     console.log("Produto ", produto.nome, "valor: ", produto.valor);
+                    produtos.push(produto);
+                    i = produtos.length;
                 } else {
                     console.log("Produto ", produto.nome, "valor: ", produto.valor);
                     produtos.push(produto);
@@ -48,8 +50,8 @@ export const Menu = () => {
         alert("Produto adicionado!")
     }
     const removerProdutos = (nome, valor) => {
-        const produtos = JSON.parse(localStorage.getItem("produtos"));
         debugger
+        const produtos = JSON.parse(localStorage.getItem("produtos"));
         if (produtos.length > 0) {
             for (let i = 0; i <= produtos.length; i++) {
                 if (nome == produtos[i].nome) {
@@ -58,10 +60,7 @@ export const Menu = () => {
                     alert("Produto removido!")
                     console.log(localStorage.getItem("produtos"));
                     return;
-                } else {
-                    alert("Produto não adicionado no carrinho!");
-                    return;
-                }
+                } 
             }
         }
 

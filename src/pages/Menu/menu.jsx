@@ -14,7 +14,8 @@ import beijinho from '../../assests/beijinho.png'
 import vela from '../../assests/vela.png'
 import menos from '../../assests/menos.png'
 import logo from '../../assests/Logo-Lanchonete.png'
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 export const Menu = () => {
     useEffect(() => {
@@ -50,7 +51,6 @@ export const Menu = () => {
         alert("Produto adicionado!")
     }
     const removerProdutos = (nome, valor) => {
-        debugger
         const produtos = JSON.parse(localStorage.getItem("produtos"));
         if (produtos.length > 0) {
             for (let i = 0; i <= produtos.length; i++) {
@@ -67,6 +67,16 @@ export const Menu = () => {
     }
     const removerProduto = (nome, valor) => {
         localStorage.removeItem("produtos");
+    }
+
+    function btnSalvar(){
+        if(localStorage.getItem("produtos") != null){
+            console.log("Tenho produto")
+            window.open('http://localhost:3000/timeDelivery','self')
+        }else if(localStorage.getItem("produtos") == null){
+            console.log("Não tenho produto")
+            alert("Não tem nenhum produto no carrinho!")
+        }
     }
 
     return (
@@ -192,7 +202,7 @@ export const Menu = () => {
             </div>
 
             <footer className="footer">
-                <button className="btnEnviar" type="button">Salvar</button>
+                <button className="btnEnviar" type="button" onClick={() => btnSalvar()}>Salvar</button>
                 <Link className="btnCanc" onClick={() => removerProduto()} to='/zilda' type="button">Cancelar</Link>
             </footer>
 

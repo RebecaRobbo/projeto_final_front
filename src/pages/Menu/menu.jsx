@@ -27,12 +27,10 @@ export const Menu = () => {
         };
         if (localStorage.getItem("produtos") != null) {
             const produtos = JSON.parse(localStorage.getItem("produtos"));
-            produtos.push(produto);
-            for (let i = 0; i <= produtos.length; i++) {
+            for (let i = 0; i < produtos.length; i++) {
                 const el = produtos[i];
                 if (el.nome == produto.nome) {
-                    console.log("Produto ", el.nome, "valor: ", el.valor);
-                    i = produto.length;
+                    console.log("Produto ", produto.nome, "valor: ", produto.valor);
                 } else {
                     console.log("Produto ", produto.nome, "valor: ", produto.valor);
                     produtos.push(produto);
@@ -41,27 +39,35 @@ export const Menu = () => {
             }
             // atualiza a lista de produtos
             localStorage.setItem("produtos", JSON.stringify(produtos))
+            console.log(localStorage.getItem("produtos"))
         } else {
             localStorage.setItem("produtos", JSON.stringify([produto]));
+            console.log("Produto: ", produto.nome, "valor: ", produto.valor);
+            console.log(localStorage.getItem("produtos"))
         }
         alert("Produto adicionado!")
     }
     const removerProdutos = (nome, valor) => {
-        debugger
         const produtos = JSON.parse(localStorage.getItem("produtos"));
+        debugger
         if (produtos.length > 0) {
             for (let i = 0; i <= produtos.length; i++) {
                 if (nome == produtos[i].nome) {
                     produtos.splice(produtos.indexOf(produtos[i]), 1);
                     localStorage.setItem("produtos", JSON.stringify(produtos));
                     alert("Produto removido!")
-                    console.log(produtos);
+                    console.log(localStorage.getItem("produtos"));
+                    return;
+                } else {
+                    alert("Produto não adicionado no carrinho!");
                     return;
                 }
             }
         }
-        alert("Produto não adicionado no carrinho!")
 
+    }
+    const removerProduto = (nome, valor) => {
+        localStorage.removeItem("produtos");
     }
 
     return (
@@ -188,7 +194,7 @@ export const Menu = () => {
 
             <footer className="footer">
                 <button className="btnEnviar" type="button">Salvar</button>
-                <Link className="btnCanc" onClick={() => removerProdutos()} to='/zilda' type="button">Cancelar</Link>
+                <Link className="btnCanc" onClick={() => removerProduto()} to='/zilda' type="button">Cancelar</Link>
             </footer>
 
 

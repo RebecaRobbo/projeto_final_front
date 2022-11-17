@@ -25,16 +25,15 @@ export const TimeDelivery = () => {
                 <h2>Horários disponiveis: </h2>
                 </div>
                 <div className="container">
-                    <div className="combox-time"> <h1 onClick={() => adicionaHorario("18")}>18 horas</h1></div>
-                    <div className="combox-time"> <h1 onClick={() => adicionaHorario("18:30")}>18:30 horas</h1></div>
-                    <div className="combox-time"> <h1 onClick={() => adicionaHorario("19")}>19 horas</h1></div>
-                    <div className="combox-time"> <h1 onClick={() => adicionaHorario("19:30")}>19:30 horas</h1></div>
-                    <div className="combox-time"> <h1 onClick={() => adicionaHorario("20")}>20 horas</h1></div>
-                    <div className="combox-time"> <h1 onClick={() => adicionaHorario("20:30")}>20:30 horas</h1></div>
-                    <div className="combox-time"> <h1 onClick={() => adicionaHorario("21")}>21 horas</h1></div>
-                    <div className="combox-time"> <h1 onClick={() => adicionaHorario("21:30")}>21:30 horas</h1></div>
+                    <div className="combox-time"> <Link className="link" onClick={() => adicionaHorario("18")} to='/delivery'>18 horas</Link></div>
+                    <div className="combox-time"> <Link  className="link" onClick={() => adicionaHorario("18:30")} to='/delivery'>18:30 horas</Link></div>
+                    <div className="combox-time"> <Link  className="link" onClick={() => adicionaHorario("19")} to='/delivery'>19 horas</Link></div>
+                    <div className="combox-time"> <Link  className="link" onClick={() => adicionaHorario("19:30")} to='/delivery'>19:30 horas</Link></div>
+                    <div className="combox-time"> <Link  className="link" onClick={() => adicionaHorario("20")} to='/delivery'>20 horas</Link></div>
+                    <div className="combox-time"> <Link  className="link" onClick={() => adicionaHorario("20:30")} to='/delivery'>20:30 horas</Link></div>
+                    <div className="combox-time"> <Link  className="link" onClick={() => adicionaHorario("21")} to='/delivery'>21 horas</Link></div>
+                    <div className="combox-time"> <Link  className="link" onClick={() => adicionaHorario("21:30")} to='/delivery'>21:30 horas</Link></div>
                 </div>
-                <Link className="btnSend" to="/delivery">Send</Link>
             </body>
         </>
     );

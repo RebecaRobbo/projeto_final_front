@@ -41,4 +41,10 @@
     margin-left: 80px;
     margin-right: 70px;
     margin-bottom: 20px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .combox-time>link{
+    text-decoration: none;
+    font-size: 14px;
   }

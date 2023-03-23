@@ -30,7 +30,7 @@ export const Menu = () => {
             const produtos = JSON.parse(localStorage.getItem("produtos"));
             for (let i = 0; i < produtos.length; i++) {
                 const el = produtos[i];
-                if (el.nome == produto.nome) {
+                if (el.nome === produto.nome) {
                     console.log("Produto ", produto.nome, "valor: ", produto.valor);
                     produtos.push(produto);
                     i = produtos.length;
@@ -54,7 +54,7 @@ export const Menu = () => {
         const produtos = JSON.parse(localStorage.getItem("produtos"));
         if (produtos.length > 0) {
             for (let i = 0; i <= produtos.length; i++) {
-                if (nome == produtos[i].nome) {
+                if (nome === produtos[i].nome) {
                     produtos.splice(produtos.indexOf(produtos[i]), 1);
                     localStorage.setItem("produtos", JSON.stringify(produtos));
                     alert("Produto removido!")

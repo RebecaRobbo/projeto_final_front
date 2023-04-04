@@ -72,7 +72,7 @@ export const Menu = () => {
     function btnSalvar(){
         if(localStorage.getItem("produtos") != null){
             console.log("Tenho produto")
-            window.open('http://localhost:3001/timeDelivery','self')
+            window.open('http://localhost:3000/timeDelivery','self')
         }else if(localStorage.getItem("produtos") == null){
             console.log("Não tenho produto")
             alert("Não tem nenhum produto no carrinho!")

@@ -3,14 +3,35 @@ import { useState } from 'react';
 import jpIMG from '../../assests/Logo-Lanchonete.png'
 import { LayoutComponents } from '../../components/LayoutComponents';
 import React, { useEffect } from 'react';
+import axios from "axios";
 
 
 export const Login = () => {
     useEffect(() => {
         document.title = 'Login';
-      });
+    });
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+
+    function login() {
+        debugger
+        axios.post(
+            'http://localhost:8081/api/login',
+            {
+                email: email,
+                password: password
+            }
+        ).then(response => {
+            if(response.data === true){
+                console.log("entrei");
+                window.open('http://localhost:3000/menu','self')
+                alert("Login válido")
+            }else{
+                alert("Login inválido!")
+            }})
+                .catch((error) => console.log(error))
+    }
+
 
     return (
         <LayoutComponents>
@@ -32,7 +53,7 @@ export const Login = () => {
                 </div>
 
                 <div className='container-login-form-btn'>
-                    <button className='login-form-btn'>login</button>
+                    <button className='login-form-btn' onClick={login}>login</button>
                 </div>
 
                 <div className='text-center'>

@@ -29,6 +29,12 @@
     top: 30px;
     right: 30px;
 }
+@media only screen and (max-width: 375px) {
+    .img-menu img {
+        height: 30px;
+        top: 5px;
+    }
+}
 
 .logo{
     height: 130px;
@@ -36,33 +42,20 @@
     left: 50px;
     top: 2px;
 }
-
-.main {
+.main{
     width: 100%;
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     min-height: 100vh;
 }
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 0 10px;
-    flex-wrap: wrap;
-}
 
-.combox {
+.combox{
     width: 400px;
     /*largura*/
     height: 700px;
-    /*altura*/
-    display: inline-block;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: rgb(241, 223, 223);
+    display:flex;
     border-radius: 10px;
     padding: 15px;
     margin: 10px;
@@ -71,3 +64,27 @@
     margin-right: 60px;
     margin-bottom: 20px;
 }
+
+  .combox>img{
+    max-width: 60%;
+    /*largura*/
+    max-height: 80%;
+    text-align: center;
+    display: block;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 2%;
+  }
+  .combox>h2{
+    font-size: 30px;
+    text-align: center;
+    display: block;
+  }
+  .combox>h3{
+    font-size: 20px;
+    display: block;
+  }
+  .combox>h4{
+    font-size: 15px;
+    display: block;
+  }

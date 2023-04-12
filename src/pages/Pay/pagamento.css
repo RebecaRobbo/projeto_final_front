@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.top h1 {
+
+    font-family: 'Lusitana';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    margin: 25px 0;
+}
+
+.img-menu img {
+    position: absolute;
+    height: 70px;
+    top: 30px;
+    right: 30px;
+}
+
+.logo{
+    height: 130px;
+    position: absolute;
+    left: 50px;
+    top: 2px;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    flex-wrap: wrap;
+}
+
+.combox {
+    width: 400px;
+    /*largura*/
+    height: 700px;
+    /*altura*/
+    display: inline-block;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(241, 223, 223);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    text-decoration: none;
+    margin-left: 75px;
+    margin-right: 60px;
+    margin-bottom: 20px;
+}

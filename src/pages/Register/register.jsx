@@ -28,7 +28,8 @@ export const Register = () => {
                     name: name,
                     lastName: lastName
                 }
-            ).then((response) => { alert("Cadastro realizado") })
+            ).then((response) => { alert("Cadastro realizado") 
+            window.open('http://localhost:3000/menu','self')})
                 .catch((error) => console.log(error))
 
         }

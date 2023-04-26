@@ -65,7 +65,7 @@
     margin-bottom: 20px;
 }
 
-  .combox>img{
+  .comboxx>img{
     max-width: 60%;
     /*largura*/
     max-height: 80%;
@@ -75,16 +75,17 @@
     margin-right: 20%;
     margin-top: 2%;
   }
-  .combox>h2{
+  .comboxx>h2{
     font-size: 30px;
     text-align: center;
     display: block;
   }
-  .combox>h3{
+  .comboxx>h3{
     font-size: 20px;
     display: block;
   }
-  .combox>h4{
+  .comboxx>h4{
     font-size: 15px;
     display: block;
   }
+  

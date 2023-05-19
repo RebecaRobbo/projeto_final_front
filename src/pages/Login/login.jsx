@@ -24,7 +24,7 @@ export const Login = () => {
         ).then(response => {
             if(response.data === true){
                 console.log("entrei");
-                window.open('http://localhost:3000/menu','self')
+                window.open("http://localhost:3000/menu","self")
                 alert("Login válido")
             }else{
                 alert("Login inválido!")

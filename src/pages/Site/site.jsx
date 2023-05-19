@@ -33,15 +33,15 @@ export const Zilda = () => {
             </div>  
             <div className='menu'>
                 <h2>Ficou com vontade? Venha dar uma olhada nos nossos produtos!</h2>
-                <div className='combox'>
+                <div className='comboxSite'>
                     <h3>Bolos</h3>
                     <img src={bolo} alt="bolo" />
                 </div>
-                <div className='combox'>
+                <div className='comboxSite'>
                     <h3>Salgados</h3>
                     <img src={salgados} alt="salgados" />
                 </div>
-                <div className='combox'>
+                <div className='comboxSite'>
                     <h3>Refrigerantes</h3>
                     <img src={refri} alt="refri" />
                 </div>

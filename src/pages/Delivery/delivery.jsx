@@ -12,7 +12,7 @@ export const Delivery = () => {
         setHorarios(JSON.parse(horario) || []);
         console.log(produto);
         setProdutos(JSON.parse(produto) || []);
-    },[]);
+    },[produto]);
     // console.log(JSON.parse(localStorage.getItem("produtos")));
     // console.log(JSON.parse(localStorage.getItem("horario")));
     console.log(produtos)

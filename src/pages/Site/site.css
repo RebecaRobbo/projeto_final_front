@@ -25,7 +25,7 @@ header div img {
   width: auto;
   max-width: 100%;
   /*largura da logo*/
-  height: 250px
+  height: 150px
       /*altura da logo*/
 }
 
@@ -65,14 +65,14 @@ header div img {
 .quem-somos h1 {
   position: absolute;
   font-size: 49px;
-  left: 1200px;
+  left: 700px;
   top: 429px;
 }
 
 .quem-somos p {
   position: absolute;
-  font-size: 15px;
-  left: 1000px;
+  font-size: 20px;
+  left: 700px;
   top: 530px;
 }
 
@@ -80,6 +80,31 @@ header div img {
   position: absolute;
   width: 556px;
   height: 409px;
-  left: 200px;
+  left: 150px;
   top: 300px;
+}
+.menu h2{
+  position: absolute;
+  width: auto;
+  max-width: 100%;
+  height: 150px;
+  left: 100px;
+  top: 800px;
+}
+.combox{
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  flex-direction: inherit;
+  justify-content: space-between;
+  margin-top: 600px;
+  margin-left: 100px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+}
+.combox h3{
+  margin-bottom: 50px;
+}
+.combox>img{
+  height: 1000px;
 }

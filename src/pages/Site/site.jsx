@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import bolo from '../../assests/bolo.png';
 import refri from '../../assests/refrigerantes.png';
 import salgados from '../../assests/bolinho_de_queijo.png';
+import face from '../../assests/logo_facebook.png';
+import insta from '../../assests/logo_instagram.png';
 export const Zilda = () => {
     useEffect(() => {
         document.title = 'Zilda';
@@ -20,7 +22,7 @@ export const Zilda = () => {
                     <li><Link className='link' to='/login'>Cardápio</Link></li>       
                     <li><Link className='link' to='/login'>Login</Link></li>
                     <li><Link className='link' to='/register'>Cadastro</Link></li>
-                    <li><Link className='link' to='/register'>Localização</Link></li>
+                    <a className='link' href="#localizacao">Localizacao</a>
                 </ul>
             </div>
            </header>
@@ -46,12 +48,11 @@ export const Zilda = () => {
                     <img src={refri} alt="refri" />
                 </div>
             </div>
-           </body>
-           <footer>
-            <div className='flex-container menu-footer'>
-                
+            <div className='localizacao' id='localizacao'>
+                <h2>Localização</h2>
+                <iframe className='loc' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234114.4115905254!2d-47.12383556718747!3d-23.531147099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf01460b9de951%3A0x24f3f9a2e1457b5a!2sZilda%20Salgados!5e0!3m2!1spt-BR!2sbr!4v1668815845579!5m2!1spt-BR!2sbr"></iframe>
             </div>
-           </footer>
+           </body>
         </>
            
     
